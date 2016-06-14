@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "94274df4_6a90175b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2016-06-14T16:30:45Z",
+      "side": 1,
+      "message": "optional: mention here that other caches are not synchronized because their cached objects are immutable.",
+      "revId": "cf0a9c0ab7c1358ec0083782015f8853b4e9e4ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b4f6119c_ab996985",
+        "filename": "src/main/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheExecutorProvider.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2016-06-14T16:30:45Z",
+      "side": 1,
+      "message": "optional: move the executor creation here so that start/stop methods are symmetric?",
+      "revId": "cf0a9c0ab7c1358ec0083782015f8853b4e9e4ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "94274df4_2ad45ff8",
+        "filename": "src/main/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheHandler.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2016-06-14T16:30:45Z",
+      "side": 1,
+      "message": "outer parentheses are not necessary in this regex",
+      "revId": "cf0a9c0ab7c1358ec0083782015f8853b4e9e4ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b4f6119c_8b962d53",
+        "filename": "src/main/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheHandler.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2016-06-14T16:30:45Z",
+      "side": 1,
+      "message": "This could indicate that there are also invalid cache names.\nRename to: isSynchronizedCache or just isSynchronized",
+      "range": {
+        "startLine": 48,
+        "startChar": 18,
+        "endLine": 48,
+        "endChar": 34
+      },
+      "revId": "cf0a9c0ab7c1358ec0083782015f8853b4e9e4ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f415e983_85962253",
+        "filename": "src/main/java/com/ericsson/gerrit/plugins/evictcache/GsonParser.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2016-06-14T16:30:45Z",
+      "side": 1,
+      "message": "in this change or in a follow up change?",
+      "revId": "cf0a9c0ab7c1358ec0083782015f8853b4e9e4ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
