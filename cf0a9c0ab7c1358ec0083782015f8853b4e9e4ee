@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "7412d9d9_c926311a",
+        "filename": "src/main/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheExecutorProvider.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1003873
+      },
+      "writtenOn": "2016-06-15T08:16:12Z",
+      "side": 1,
+      "message": "\u003e This class is a guice provider so ...\n\nCorrect.",
+      "parentUuid": "141b5db9_0627da17",
+      "revId": "cf0a9c0ab7c1358ec0083782015f8853b4e9e4ee",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "94274df4_2ad45ff8",
         "filename": "src/main/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheHandler.java",
         "patchSetId": 3
