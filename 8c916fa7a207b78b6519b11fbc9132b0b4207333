@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3a3e904a_0012e6ae",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheRestApiServletTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2016-07-14T18:30:21Z",
+      "side": 1,
+      "message": "I am not sold on the idea of extracting every string into a constant in test code. I do not see the added value if the string is not reused.\n\nAnd if the string is reused in the same test, creating a local variable would be enough to remove duplicated strings.",
+      "parentUuid": "5a37c46b_4171d2ee",
+      "range": {
+        "startLine": 90,
+        "startChar": 45,
+        "endLine": 90,
+        "endChar": 56
+      },
+      "revId": "8c916fa7a207b78b6519b11fbc9132b0b4207333",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a3e904a_80359637",
         "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheRestApiServletTest.java",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2016-07-14T18:20:22Z",
       "side": 1,
       "message": "Same here",
+      "range": {
+        "startLine": 91,
+        "startChar": 57,
+        "endLine": 91,
+        "endChar": 68
+      },
+      "revId": "8c916fa7a207b78b6519b11fbc9132b0b4207333",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a37c46b_c15de263",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheRestApiServletTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1012987
+      },
+      "writtenOn": "2016-07-14T18:30:21Z",
+      "side": 1,
+      "message": "Done, I create a local variable",
+      "parentUuid": "3a3e904a_80359637",
       "range": {
         "startLine": 91,
         "startChar": 57,
