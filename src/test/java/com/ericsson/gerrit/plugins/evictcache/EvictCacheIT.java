@@ -22,9 +22,9 @@ import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static com.github.tomakehurst.wiremock.client.WireMock.verify;
 
 import com.google.gerrit.acceptance.GerritConfig;
-import com.google.gerrit.acceptance.GerritConfigs;
+import com.google.gerrit.acceptance.LightweightPluginDaemonTest;
 import com.google.gerrit.acceptance.NoHttpd;
-import com.google.gerrit.acceptance.PluginDaemonTest;
+import com.google.gerrit.acceptance.TestPlugin;
 
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.RequestListener;
@@ -38,16 +38,19 @@ import org.junit.Test;
 import java.util.concurrent.TimeUnit;
 
 @NoHttpd
-public class EvictCacheIT extends PluginDaemonTest {
+@TestPlugin(
+    name = "evict-cache",
+    sysModule = "com.ericsson.gerrit.plugins.evictcache.Module",
+    httpModule = "com.ericsson.gerrit.plugins.evictcache.HttpModule"
+)
+public class EvictCacheIT extends LightweightPluginDaemonTest {
 
   @Rule
   public WireMockRule wireMockRule = new WireMockRule(Constants.PORT);
 
   @Test
-  @GerritConfigs({
-      @GerritConfig(name = "plugin.evict-cache.url", value = Constants.URL),
-      @GerritConfig(name = "plugin.evict-cache.user", value = "admin")
-  })
+  @GerritConfig(name = "plugin.evict-cache.url", value = Constants.URL)
+  @GerritConfig(name = "plugin.evict-cache.user", value = "admin")
   public void flushAndSendPost() throws Exception {
     final String flushRequest =
         Constants.ENDPOINT_BASE + Constants.PROJECT_LIST;
