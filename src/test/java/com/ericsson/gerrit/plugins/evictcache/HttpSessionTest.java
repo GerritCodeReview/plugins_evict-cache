@@ -19,7 +19,8 @@ import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static com.google.common.truth.Truth.assertThat;
-import static org.easymock.EasyMock.expect;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import com.ericsson.gerrit.plugins.evictcache.CacheResponseHandler.CacheResult;
 import com.github.tomakehurst.wiremock.http.Fault;
@@ -27,14 +28,16 @@ import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import com.github.tomakehurst.wiremock.stubbing.Scenario;
 
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.easymock.EasyMockSupport;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.net.SocketTimeoutException;
 
-public class HttpSessionTest extends EasyMockSupport {
+@RunWith(MockitoJUnitRunner.class)
+public class HttpSessionTest {
   private static final int MAX_TRIES = 3;
   private static final int RETRY_INTERVAL = 250;
   private static final int TIMEOUT = 500;
@@ -52,7 +55,6 @@ public class HttpSessionTest extends EasyMockSupport {
   private static final String RETRY_AT_ERROR = "Retry at error";
   private static final String RETRY_AT_DELAY = "Retry at delay";
 
-  private Configuration cfg;
   private CloseableHttpClient httpClient;
   private HttpSession httpSession;
 
@@ -61,15 +63,15 @@ public class HttpSessionTest extends EasyMockSupport {
 
   @Before
   public void setUp() throws Exception {
-    cfg = createMock(Configuration.class);
-    expect(cfg.getUrl()).andReturn(Constants.URL).anyTimes();
-    expect(cfg.getUser()).andReturn("user");
-    expect(cfg.getPassword()).andReturn("pass");
-    expect(cfg.getMaxTries()).andReturn(MAX_TRIES).anyTimes();
-    expect(cfg.getConnectionTimeout()).andReturn(TIMEOUT).anyTimes();
-    expect(cfg.getSocketTimeout()).andReturn(TIMEOUT).anyTimes();
-    expect(cfg.getRetryInterval()).andReturn(RETRY_INTERVAL).anyTimes();
-    replayAll();
+    Configuration cfg = mock(Configuration.class);
+    when(cfg.getUrl()).thenReturn(Constants.URL);
+    when(cfg.getUser()).thenReturn("user");
+    when(cfg.getPassword()).thenReturn("pass");
+    when(cfg.getMaxTries()).thenReturn(MAX_TRIES);
+    when(cfg.getConnectionTimeout()).thenReturn(TIMEOUT);
+    when(cfg.getSocketTimeout()).thenReturn(TIMEOUT);
+    when(cfg.getRetryInterval()).thenReturn(RETRY_INTERVAL);
+
     httpClient = new HttpClientProvider(cfg).get();
     httpSession = new HttpSession(httpClient, Constants.URL);
   }
@@ -82,24 +84,24 @@ public class HttpSessionTest extends EasyMockSupport {
 
   @Test
   public void testNotAuthorized() throws Exception {
-    String expected = "unauthorized";
+    String whened = "unauthorized";
     stubFor(post(urlEqualTo(ENDPOINT)).willReturn(
-        aResponse().withStatus(UNAUTHORIZED).withBody(expected)));
+        aResponse().withStatus(UNAUTHORIZED).withBody(whened)));
 
     CacheResult result = httpSession.post(ENDPOINT, EMPTYJSON);
     assertThat(result.isSuccessful()).isFalse();
-    assertThat(result.getMessage()).isEqualTo(expected);
+    assertThat(result.getMessage()).isEqualTo(whened);
   }
 
   @Test
   public void testNotFound() throws Exception {
-    String expected = "not found";
+    String whened = "not found";
     stubFor(post(urlEqualTo(ENDPOINT)).willReturn(
-        aResponse().withStatus(NOT_FOUND).withBody(expected)));
+        aResponse().withStatus(NOT_FOUND).withBody(whened)));
 
     CacheResult result = httpSession.post(ENDPOINT, EMPTYJSON);
     assertThat(result.isSuccessful()).isFalse();
-    assertThat(result.getMessage()).isEqualTo(expected);
+    assertThat(result.getMessage()).isEqualTo(whened);
   }
 
   @Test
