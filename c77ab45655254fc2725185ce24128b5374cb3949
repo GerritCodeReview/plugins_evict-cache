@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d747268e_7bd73f0e",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/ConfigurationTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1019328
+      },
+      "writtenOn": "2017-01-03T13:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d747268e_fb118f05",
+      "range": {
+        "startLine": 42,
+        "startChar": 2,
+        "endLine": 42,
+        "endChar": 8
+      },
+      "revId": "c77ab45655254fc2725185ce24128b5374cb3949",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d747268e_db0e53e5",
         "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/ConfigurationTest.java",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2017-01-03T13:13:35Z",
       "side": 1,
       "message": "same here",
+      "range": {
+        "startLine": 43,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 8
+      },
+      "revId": "c77ab45655254fc2725185ce24128b5374cb3949",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad8d7b0_702b68f4",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/ConfigurationTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1019328
+      },
+      "writtenOn": "2017-01-03T13:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d747268e_db0e53e5",
       "range": {
         "startLine": 43,
         "startChar": 2,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "bad8d7b0_5028e4f5",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheExecutorProviderTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1019328
+      },
+      "writtenOn": "2017-01-03T13:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bad8d7b0_3021f014",
+      "range": {
+        "startLine": 34,
+        "startChar": 2,
+        "endLine": 34,
+        "endChar": 8
+      },
+      "revId": "c77ab45655254fc2725185ce24128b5374cb3949",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d747268e_3bddb72e",
         "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheRestApiServletTest.java",
         "patchSetId": 5
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "bad8d7b0_b0f3207e",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/EvictCacheRestApiServletTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1019328
+      },
+      "writtenOn": "2017-01-03T13:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d747268e_3bddb72e",
+      "range": {
+        "startLine": 41,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 49
+      },
+      "revId": "c77ab45655254fc2725185ce24128b5374cb3949",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d747268e_1be27bec",
         "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/HttpClientProviderTest.java",
         "patchSetId": 5
@@ -105,6 +201,30 @@
       "writtenOn": "2017-01-03T13:13:35Z",
       "side": 1,
       "message": "Move on a separate line.",
+      "range": {
+        "startLine": 37,
+        "startChar": 2,
+        "endLine": 37,
+        "endChar": 8
+      },
+      "revId": "c77ab45655254fc2725185ce24128b5374cb3949",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d747268e_5bdc032f",
+        "filename": "src/test/java/com/ericsson/gerrit/plugins/evictcache/HttpClientProviderTest.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1019328
+      },
+      "writtenOn": "2017-01-03T13:40:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d747268e_1be27bec",
       "range": {
         "startLine": 37,
         "startChar": 2,
