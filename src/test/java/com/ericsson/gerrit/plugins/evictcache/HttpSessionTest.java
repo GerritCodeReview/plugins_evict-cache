@@ -54,12 +54,13 @@ public class HttpSessionTest {
   private HttpSession httpSession;
 
   @Rule
-  public WireMockRule wireMockRule = new WireMockRule(Constants.PORT);
+  public WireMockRule wireMockRule = new WireMockRule(0);
 
   @Before
   public void setUp() throws Exception {
+    String url = "http://localhost:" + wireMockRule.port();
     Configuration cfg = mock(Configuration.class);
-    when(cfg.getUrl()).thenReturn(Constants.URL);
+    when(cfg.getUrl()).thenReturn(url);
     when(cfg.getUser()).thenReturn("user");
     when(cfg.getPassword()).thenReturn("pass");
     when(cfg.getMaxTries()).thenReturn(MAX_TRIES);
@@ -68,7 +69,7 @@ public class HttpSessionTest {
     when(cfg.getRetryInterval()).thenReturn(RETRY_INTERVAL);
 
     httpSession =
-        new HttpSession(new HttpClientProvider(cfg).get(), Constants.URL);
+        new HttpSession(new HttpClientProvider(cfg).get(), url);
   }
 
   @Test

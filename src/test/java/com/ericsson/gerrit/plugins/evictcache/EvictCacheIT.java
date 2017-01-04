@@ -46,12 +46,14 @@ import java.util.concurrent.TimeUnit;
     httpModule = "com.ericsson.gerrit.plugins.evictcache.HttpModule"
 )
 public class EvictCacheIT extends LightweightPluginDaemonTest {
+  private static final int PORT = 18888;
+  private static final String URL = "http://localhost:" + PORT;
 
   @Rule
-  public WireMockRule wireMockRule = new WireMockRule(Constants.PORT);
+  public WireMockRule wireMockRule = new WireMockRule(PORT);
 
   @Test
-  @GerritConfig(name = "plugin.evict-cache.url", value = Constants.URL)
+  @GerritConfig(name = "plugin.evict-cache.url", value = URL)
   @GerritConfig(name = "plugin.evict-cache.user", value = "admin")
   public void flushAndSendPost() throws Exception {
     final String flushRequest =

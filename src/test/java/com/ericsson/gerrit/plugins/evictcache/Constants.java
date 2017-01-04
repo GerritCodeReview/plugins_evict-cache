@@ -19,7 +19,6 @@ final class Constants {
   private Constants() {
   }
 
-  static final String URL = "http://localhost:18888";
   static final String ENDPOINT_BASE = "/plugins/evict-cache/gerrit/evict/";
   static final String PROJECT_LIST = "project_list";
   static final String ACCOUNTS = "accounts";
@@ -27,6 +26,4 @@ final class Constants {
   static final String GROUPS_BYINCLUDE = "groups_byinclude";
   static final String GROUPS_MEMBERS = "groups_members";
   static final String DEFAULT = "projects";
-
-  static final int PORT = 18888;
 }
