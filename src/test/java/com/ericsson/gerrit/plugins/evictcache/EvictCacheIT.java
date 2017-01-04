@@ -25,6 +25,7 @@ import com.google.gerrit.acceptance.GerritConfig;
 import com.google.gerrit.acceptance.LightweightPluginDaemonTest;
 import com.google.gerrit.acceptance.NoHttpd;
 import com.google.gerrit.acceptance.TestPlugin;
+import com.google.gerrit.acceptance.UseSsh;
 
 import com.github.tomakehurst.wiremock.http.Request;
 import com.github.tomakehurst.wiremock.http.RequestListener;
@@ -38,6 +39,7 @@ import org.junit.Test;
 import java.util.concurrent.TimeUnit;
 
 @NoHttpd
+@UseSsh
 @TestPlugin(
     name = "evict-cache",
     sysModule = "com.ericsson.gerrit.plugins.evictcache.Module",
