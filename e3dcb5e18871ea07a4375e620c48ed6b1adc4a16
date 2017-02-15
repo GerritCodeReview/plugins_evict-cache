@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9f305f53_6e25c835",
+        "filename": "BUILD",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-02-15T22:56:05Z",
+      "side": 1,
+      "message": "Is in Gerrit API, remove.",
+      "range": {
+        "startLine": 21,
+        "startChar": 8,
+        "endLine": 21,
+        "endChar": 21
+      },
+      "revId": "e3dcb5e18871ea07a4375e620c48ed6b1adc4a16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "decaa995_9f6b6429",
+        "filename": "BUILD",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-02-15T22:56:05Z",
+      "side": 1,
+      "message": "Wh do we need mock library in plugin final artifact?",
+      "range": {
+        "startLine": 22,
+        "startChar": 8,
+        "endLine": 22,
+        "endChar": 25
+      },
+      "revId": "e3dcb5e18871ea07a4375e620c48ed6b1adc4a16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
