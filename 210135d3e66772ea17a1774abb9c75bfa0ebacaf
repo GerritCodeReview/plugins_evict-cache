@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3bfaa97_6dd38da9",
+        "filename": "BUILD",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2017-02-16T15:15:08Z",
+      "side": 1,
+      "message": "@Damien, is there any efforts to simplify unit tests rule? Right now, we borrowed from another GH issue that unit.bzl Skylark rule, that generates for each and every passed java class its own JUnit Suite. Sometimes, as it is the case for this plugin, non junit test (utility) classes are included. And that doesn\u0027t work. So that we would need to split that in two rules:\n\n  java_library(\n    name \u003d \"testutils\"\n   srcs \u003d \u003cnon_junit_tests classes\u003e\n   ...\n\nand\n\nactually unit_tests rule that excludes those non junit resources. In Buck all I needed to say was:\n\n  java_test(\n    name \u003d \u0027evict-cache_tests\u0027,\n    srcs \u003d glob([\u0027src/test/java/**/*.java\u0027]),\n    [...]\n  )\n\nand it was smart enough to understand, if a class is junit or not.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 1
+      },
+      "revId": "210135d3e66772ea17a1774abb9c75bfa0ebacaf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
