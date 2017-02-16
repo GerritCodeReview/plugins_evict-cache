@@ -14,9 +14,11 @@
 
 package com.ericsson.gerrit.plugins.evictcache;
 
-final class Constants {
+import org.junit.Ignore;
 
-  private Constants() {
+@Ignore public final class Constants {
+
+  public private Constants() {
   }
 
   static final String ENDPOINT_BASE = "/plugins/evict-cache/gerrit/evict/";
