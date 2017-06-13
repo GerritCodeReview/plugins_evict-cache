@@ -58,7 +58,6 @@ public class EvictCacheExecutorProviderTest {
     assertThat(evictCacheExecutorProvider.get()).isEqualTo(executorMock);
     evictCacheExecutorProvider.stop();
     verify(executorMock).shutdown();
-    verify(executorMock).unregisterWorkQueue();
     assertThat(evictCacheExecutorProvider.get()).isNull();
   }
 }
