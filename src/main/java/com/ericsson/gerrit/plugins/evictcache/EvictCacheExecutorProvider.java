@@ -26,7 +26,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 @Singleton
 class EvictCacheExecutorProvider
     implements Provider<ScheduledThreadPoolExecutor>, LifecycleListener {
-  private WorkQueue.Executor executor;
+  private ScheduledThreadPoolExecutor executor;
 
   @Inject
   EvictCacheExecutorProvider(WorkQueue workQueue,
